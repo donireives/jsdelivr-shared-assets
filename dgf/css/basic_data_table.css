@@ -1,0 +1,81 @@
+.table td {
+    font-size: 92%;
+    border-color: #f1f3f4;
+}
+
+.table th {
+    padding: .55rem .85rem;
+    font-size: 95%;
+    background-color: #f8f9fa;
+    border-color: #e9ecef;
+    font-weight: 600;
+    color: #495057;
+}
+
+.table caption + thead tr:first-child td, .table caption + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table thead:first-child tr:first-child td, .table thead:first-child tr:first-child th {
+    border-top-width: 1px !important;
+}
+
+.dataTables_info {
+    color: #757575 !important;
+}
+
+.bottom {
+    padding-top: 20px !important;
+    padding-left: 15px !important;
+    padding-right: 20px !important;
+}
+
+.dataTables_length select {
+    border: 1px solid #e1e5e9 !important;
+    border-radius: 6px !important;
+    padding: .2375rem .475rem !important;
+    height: 1.777rem !important;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.dataTables_length select:focus {
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25) !important;
+}
+
+.dataTables_paginate .paginate_button {
+    padding: .16rem !important;
+    min-width: 1.5rem !important;
+    border-radius: 4px !important;
+    margin: 0 2px !important;
+    transition: all 0.3s ease !important;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background-color: #e9ecef !important;
+    border-color: #dee2e6 !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    color: #fff !important;
+}
+
+/* Action button styling */
+.btn-link.dropdown-toggle {
+    border: none !important;
+    background: none !important;
+    padding: 0.25rem 0.5rem !important;
+    color: #6c757d !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+.btn-link.dropdown-toggle:hover {
+    color: #495057 !important;
+    background: rgba(108, 117, 125, 0.1) !important;
+    border-radius: 4px !important;
+}
+
+.btn-link.dropdown-toggle:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
