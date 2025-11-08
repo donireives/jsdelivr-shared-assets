@@ -1,0 +1,222 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+}
+
+.qr-container {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Horizontal layout styles */
+@media (orientation: landscape) and (max-height: 600px) {
+    body {
+        align-items: flex-start;
+        padding: 0;
+        min-height: 600px;
+        height: 100vh;
+    }
+
+    .qr-container {
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-gap: 0.5rem;
+        text-align: left;
+        width: 1024px;
+        height: 600px;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        border-radius: 0;
+    }
+
+    .qris-header {
+        grid-column: 1 / -1;
+        height: 40px;
+        margin: 0;
+        padding: 0.25rem;
+    }
+
+    .qris-title {
+        grid-column: 1 / -1;
+        height: 30px;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .qr-code {
+        grid-row: 3;
+        grid-column: 1;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: 450px;
+        padding-top: 20px;
+    }
+
+    #qrcode img {
+        width: 320px !important;
+        height: 320px !important;
+    }
+
+    .amount {
+        grid-row: 3;
+        grid-column: 2;
+        margin: 0;
+        font-size: 2.5rem;
+        padding-left: 2rem;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .merchant-info {
+        grid-row: 3;
+        grid-column: 2;
+        margin: 0 0 0 2rem;
+        padding: 1rem 1rem 70px 1rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .merchant-info p {
+        margin: 0.15rem 0;
+        font-size: 1rem;
+    }
+
+    .merchant-info .label {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+
+    .btn-cancel {
+        position: absolute;
+        bottom: 15px;
+        left: 1rem;
+        right: 1rem;
+        margin: 0;
+        padding: 0.75rem 1.5rem;
+        max-width: none;
+        height: 45px;
+        width: calc(100% - 2rem);
+        box-sizing: border-box;
+    }
+
+    .qris-logo {
+        height: 35px;
+    }
+}
+
+/* Existing styles with some adjustments */
+.qris-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.qris-logo {
+    height: 40px;
+}
+
+.qris-title {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#countdown {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    background: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
+    margin: 0 0.25rem;
+}
+
+#countdown.warning {
+    color: #e74c3c;
+    background: #fff5f5;
+}
+
+.qr-code {
+    background: white;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: fit-content;
+}
+
+.amount {
+    font-size: 2rem;
+    color: #ff6b00;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.merchant-info {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.merchant-info p {
+    margin: 0.25rem 0;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.merchant-info .label {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+.btn-cancel {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-cancel:hover:not(:disabled) {
+    background: #c82333;
+}
+
+.btn-cancel:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
